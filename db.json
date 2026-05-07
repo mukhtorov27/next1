@@ -1,1 +1,90 @@
-{}
+{
+  "jobs": [
+    {
+      "id": 2,
+      "title": "UX/UI Designer",
+      "company": "DesignStudio",
+      "location": "New York, NY",
+      "salary": "$90,000 - $110,000",
+      "category": "Design",
+      "type": "Full-time",
+      "tags": [
+        "Figma",
+        "User Research",
+        "Product"
+      ],
+      "description": "Create intuitive product experiences for web and mobile, working closely with developers and stakeholders."
+    },
+    {
+      "id": 3,
+      "title": "Digital Marketing Manager",
+      "company": "MarketWave",
+      "location": "Los Angeles, CA",
+      "salary": "$95,000 - $120,000",
+      "category": "Marketing",
+      "type": "Full-time",
+      "tags": [
+        "SEO",
+        "Analytics",
+        "Campaigns"
+      ],
+      "description": "Lead marketing growth initiatives across channels and drive measurable performance for product launches."
+    },
+    {
+      "id": 4,
+      "title": "Full Stack Developer",
+      "company": "StartupHub",
+      "location": "Remote",
+      "salary": "$100,000 - $130,000",
+      "category": "Technology",
+      "type": "Remote",
+      "tags": [
+        "Node.js",
+        "React",
+        "AWS"
+      ],
+      "description": "Build full stack solutions and own features from design through deployment."
+    },
+    {
+      "id": 5,
+      "title": "Sales Representative",
+      "company": "SalesForce Co",
+      "location": "Chicago, IL",
+      "salary": "$70,000 - $90,000",
+      "category": "Sales",
+      "type": "Full-time",
+      "tags": [
+        "CRM",
+        "Outbound",
+        "Negotiation"
+      ],
+      "description": "Drive new business growth through outreach, qualification, and relationship-building."
+    },
+    {
+      "id": 6,
+      "title": "Financial Analyst",
+      "company": "Finance Solutions",
+      "location": "Boston, MA",
+      "salary": "$85,000 - $105,000",
+      "category": "Finance",
+      "type": "Full-time",
+      "tags": [
+        "Forecasting",
+        "Excel",
+        "Reporting"
+      ],
+      "description": "Analyze financial performance and provide insights that support business decisions."
+    }
+  ],
+  "applications": [
+    {
+      "id": 1,
+      "name": "Nozim",
+      "email": "kozim@gmail.com",
+      "jobId": 1,
+      "jobTitle": "Senior Frontend Engineer - TechCorp",
+      "appliedDate": "Apr 30, 2026, 08:51 AM",
+      "message": "I am excited to apply for this role and bring my React experience to your team."
+    }
+  ]
+}

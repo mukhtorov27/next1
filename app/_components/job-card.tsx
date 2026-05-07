@@ -1,13 +1,9 @@
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Job } from "../../lib/types";
 
-interface JobCardProps {
-  title: string;
-  company: string;
-  location: string;
-  salary: string;
-  tags: string[];
-  description: string;
+interface JobCardProps extends Job {
+  onView: () => void;
+  onApply: () => void;
 }
 
 export default function JobCard({
@@ -17,6 +13,8 @@ export default function JobCard({
   salary,
   tags,
   description,
+  onView,
+  onApply,
 }: JobCardProps) {
   return (
     <article className="rounded-3xl border border-border/70 bg-card p-6 shadow-sm shadow-black/5">
@@ -46,15 +44,12 @@ export default function JobCard({
         ))}
       </div>
       <div className="mt-6 flex flex-wrap items-center gap-3">
-        <Button variant="secondary" size="sm">
+        <Button variant="secondary" size="sm" onClick={onView}>
           View Details
         </Button>
-        <Link
-          href="/"
-          className="text-sm font-medium text-primary hover:text-primary/80"
-        >
-          Save job
-        </Link>
+        <Button size="sm" onClick={onApply}>
+          Apply
+        </Button>
       </div>
     </article>
   );
