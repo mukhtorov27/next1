@@ -45,6 +45,11 @@ export default function JobsPage() {
       .finally(() => setLoading(false));
   }, [setJobs, setLoading]);
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setSearch(params.get("search") ?? "");
+  }, [setSearch]);
+
   const categoryOptions = useMemo(
     () => [
       "All Categories",

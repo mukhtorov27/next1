@@ -18,7 +18,11 @@ export default function HomeHero() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+        <form
+          action="/jobs"
+          method="get"
+          className="flex flex-col gap-4 sm:flex-row sm:items-center"
+        >
           <div className="flex-1 rounded-2xl border border-border bg-card p-3 shadow-sm shadow-black/5">
             <label className="sr-only" htmlFor="hero-search">
               Search jobs
@@ -26,16 +30,17 @@ export default function HomeHero() {
             <div className="flex gap-2">
               <input
                 id="hero-search"
+                name="search"
                 type="text"
                 placeholder="Search by job title, company, or keywords..."
                 className="flex-1 rounded-2xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/20"
               />
-              <Button className="whitespace-nowrap" size="lg">
+              <Button type="submit" className="whitespace-nowrap" size="lg">
                 Search
               </Button>
             </div>
           </div>
-        </div>
+        </form>
 
         <div className="flex flex-wrap gap-3">
           <Link href="/jobs">

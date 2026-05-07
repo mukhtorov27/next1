@@ -47,9 +47,6 @@ export default function JobCard({
         <Button variant="secondary" size="sm" onClick={onView}>
           View Details
         </Button>
-        <Button size="sm" onClick={onApply}>
-          Apply
-        </Button>
       </div>
     </article>
   );

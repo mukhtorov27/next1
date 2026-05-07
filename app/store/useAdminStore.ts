@@ -58,8 +58,8 @@ interface AdminStore {
 }
 
 const useAdminStore = create<AdminStore>((set, get) => ({
-  email: "",
-  password: "",
+  email: "admin@jobportal.com",
+  password: "admin123",
   loginError: "",
   isLoggedIn: false,
   jobs: [],

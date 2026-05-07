@@ -28,7 +28,7 @@ const Navbar = () => {
           >
             Jobs
           </Link>
-          <Link href="/jobs">
+          <Link href="/admin">
             <Button size="sm">Post a Job</Button>
           </Link>
         </nav>
