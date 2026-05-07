@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ProtectedAdmin from "../ProtectedAdmin";
 import useAdminStore from "../../store/useAdminStore";
 import { Application } from "../../../lib/types";
 
 export default function AdminApplicationsPage() {
+  const [selectedApplication, setSelectedApplication] =
+    useState<Application | null>(null);
   const applications = useAdminStore((state) => state.applications);
   const loading = useAdminStore((state) => state.appsLoading);
   const error = useAdminStore((state) => state.appsError);
@@ -25,9 +27,11 @@ export default function AdminApplicationsPage() {
   };
 
   const handleView = (application: Application) => {
-    alert(
-      `Name: ${application.name}\nEmail: ${application.email}\nJob: ${application.jobTitle}\nApplied: ${application.appliedDate}\nMessage: ${application.message ?? "(no message)"}`,
-    );
+    setSelectedApplication(application);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedApplication(null);
   };
 
   return (
@@ -54,6 +58,51 @@ export default function AdminApplicationsPage() {
         {error ? (
           <div className="rounded-3xl border border-destructive/70 bg-destructive/10 p-4 text-sm text-destructive">
             {error}
+          </div>
+        ) : null}
+
+        {selectedApplication ? (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4 py-8">
+            <div className="w-full max-w-xl rounded-3xl border border-border/70 bg-card p-6 shadow-2xl shadow-black/20">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground">
+                    Application Details
+                  </p>
+                  <h3 className="mt-2 text-2xl font-semibold text-foreground">
+                    {selectedApplication.name}
+                  </h3>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleCloseModal}
+                  className="rounded-full border border-border/70 bg-background px-3 py-2 text-sm font-medium text-foreground transition hover:bg-primary/10"
+                >
+                  Close
+                </button>
+              </div>
+
+              <div className="mt-6 space-y-4 text-sm text-foreground">
+                <div>
+                  <span className="font-semibold">Email:</span>{" "}
+                  {selectedApplication.email}
+                </div>
+                <div>
+                  <span className="font-semibold">Job:</span>{" "}
+                  {selectedApplication.jobTitle}
+                </div>
+                <div>
+                  <span className="font-semibold">Applied:</span>{" "}
+                  {selectedApplication.appliedDate}
+                </div>
+                <div>
+                  <span className="font-semibold">Message:</span>
+                  <p className="mt-2 rounded-2xl border border-border/70 bg-background p-4">
+                    {selectedApplication.message ?? "No message provided."}
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         ) : null}
 

@@ -85,7 +85,15 @@
       "jobTitle": "Senior Frontend Engineer - TechCorp",
       "appliedDate": "Apr 30, 2026, 08:51 AM",
       "message": "I am excited to apply for this role and bring my React experience to your team."
+    },
+    {
+      "id": 2,
+      "name": "mukhtorov",
+      "email": "mukhtorov@gmail.com",
+      "jobId": 2,
+      "jobTitle": "UX/UI Designer - DesignStudio",
+      "appliedDate": "May 7, 2026, 04:43 PM",
+      "message": "i fit perfectly for this job i am sure that you will accept me\n"
     }
   ]
 }
-
