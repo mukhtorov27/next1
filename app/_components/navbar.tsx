@@ -17,13 +17,13 @@ const Navbar = () => {
 
         <nav className="flex items-center gap-4">
           <Link
-            href="/"
+            href="/" 
             className="text-sm font-medium text-foreground/70 transition hover:text-foreground"
           >
             Home
           </Link>
           <Link
-            href="/jobs"
+            href="/jobs" 
             className="text-sm font-medium text-foreground/70 transition hover:text-foreground"
           >
             Jobs
