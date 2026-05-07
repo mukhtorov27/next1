@@ -1,21 +1,6 @@
 {
   "jobs": [
     {
-      "id": 2,
-      "title": "UX/UI Designer",
-      "company": "DesignStudio",
-      "location": "New York, NY",
-      "salary": "$90,000 - $110,000",
-      "category": "Design",
-      "type": "Full-time",
-      "tags": [
-        "Figma",
-        "User Research",
-        "Product"
-      ],
-      "description": "Create intuitive product experiences for web and mobile, working closely with developers and stakeholders."
-    },
-    {
       "id": 3,
       "title": "Digital Marketing Manager",
       "company": "MarketWave",

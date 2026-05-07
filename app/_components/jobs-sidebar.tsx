@@ -63,11 +63,8 @@ export default function JobsSidebar({
             </option>
           ))}
         </select>
-        <Button className="w-full" size="lg" onClick={() => {}}>
-          Apply Filter
-        </Button>
+        
         <Button
-          variant="outline"
           className="w-full"
           size="lg"
           onClick={onReset}
